@@ -1,0 +1,214 @@
+/* 管理页面样式 */
+.admin-container {
+    padding: 30px 0;
+}
+
+/* 操作区域样式 */
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.type-selector select {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.add-btn {
+    padding: 10px 20px;
+    background: #2ecc71;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-btn:hover {
+    background: #27ae60;
+}
+
+/* 数据列表样式 */
+.data-list {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.data-item {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.data-item:last-child {
+    border-bottom: none;
+}
+
+.data-content {
+    flex: 1;
+}
+
+.data-title {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.data-info {
+    color: #666;
+    font-size: 14px;
+}
+
+.data-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn, .delete-btn {
+    padding: 5px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.edit-btn {
+    background: #3498db;
+    color: #fff;
+}
+
+.delete-btn {
+    background: #e74c3c;
+    color: #fff;
+}
+
+.edit-btn:hover {
+    background: #2980b9;
+}
+
+.delete-btn:hover {
+    background: #c0392b;
+}
+
+/* 模态框样式 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.form-buttons button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.form-buttons button[type="submit"] {
+    background: #2ecc71;
+    color: #fff;
+}
+
+.form-buttons button[type="button"] {
+    background: #95a5a6;
+    color: #fff;
+}
+
+.form-buttons button:hover {
+    opacity: 0.9;
+}
+
+/* 修改分页样式 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #fff;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.pagination a:hover,
+.pagination a.active {
+    background: #2ecc71;
+    color: #fff;
+}
+
+/* 富文本编辑器容器样式 */
+#editor-container {
+    min-height: 300px;
+    background: #fff;
+} 

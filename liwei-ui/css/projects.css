@@ -1,0 +1,93 @@
+/* 项目列表样式 */
+.project-list {
+    padding: 60px 0;
+}
+
+.project-items {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.project-item {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+}
+
+.project-content {
+    padding: 30px;
+}
+
+.project-content h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.project-excerpt {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #999;
+}
+
+.project-date {
+    color: #666;
+}
+
+.read-more {
+    color: #2ecc71;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 分页样式 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #fff;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.pagination a:hover,
+.pagination a.active {
+    background: #2ecc71;
+    color: #fff;
+}
+
+/* 错误提示样式 */
+.error-message {
+    text-align: center;
+    padding: 40px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.error-message p {
+    color: #666;
+    font-size: 16px;
+} 

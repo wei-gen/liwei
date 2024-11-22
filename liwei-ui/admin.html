@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台管理 - 深圳市景鹏环保科技有限公司</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="js/config.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@wangeditor/editor@latest/dist/css/style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@wangeditor/editor@latest/dist/index.min.js"></script>
+</head>
+<body>
+    <!-- 主要内容区域 -->
+    <div class="admin-container">
+        <div class="container">
+            <!-- 操作按钮 -->
+            <div class="admin-header">
+                <div class="type-selector">
+                    <select id="typeFilter">
+                        <option value="">全部类型</option>
+                        <option value="0">新闻资讯</option>
+                        <option value="1">项目公示</option>
+                        <option value="2">案例展示</option>
+                    </select>
+                </div>
+                <button class="add-btn" onclick="showAddModal()">添加新内容</button>
+            </div>
+
+            <!-- 数据列表 -->
+            <div class="data-list" id="dataContainer">
+                <!-- 数据将通过JavaScript动态加载 -->
+            </div>
+
+            <!-- 分页 -->
+            <div class="pagination" id="paginationContainer">
+                <!-- 分页将通过JavaScript动态生成 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 添加/编辑模态框 -->
+    <div class="modal" id="editModal">
+        <div class="modal-content">
+            <h2 id="modalTitle">添加新内容</h2>
+            <form id="editForm">
+                <input type="hidden" id="editId">
+                <div class="form-group">
+                    <label>类型：</label>
+                    <select id="editType" required>
+                        <option value="0">新闻资讯</option>
+                        <option value="1">项目公示</option>
+                        <option value="2">案例展示</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>标题：</label>
+                    <input type="text" id="editTitle" required>
+                </div>
+                <div class="form-group">
+                    <label>描述：</label>
+                    <textarea id="editDescription" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>内容：</label>
+                    <div id="editor-toolbar" style="border: 1px solid #ccc;"></div>
+                    <div id="editor-container" style="border: 1px solid #ccc; border-top: none; height: 300px;"></div>
+                </div>
+                <div class="form-group">
+                    <label>发布时间：</label>
+                    <input type="datetime-local" id="editCreateTime" required>
+                </div>
+                <div class="form-group">
+                    <label>图片：</label>
+                    <input type="file" id="editImage" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <label>附件下载地址：</label>
+                    <input type="text" id="editAttachment" placeholder="请输入附件下载地址">
+                </div>
+                <div class="form-buttons">
+                    <button type="submit">保存</button>
+                    <button type="button" onclick="closeModal()">取消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html> 
