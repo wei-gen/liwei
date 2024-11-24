@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>联系我们 - 深圳市景鹏环保科技有限公司</title>
+    <title>联系我们 - 深圳市涟漪环保科技有限公司</title>
     <link rel="icon" href="images/logo.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contact.css">
@@ -17,11 +17,11 @@
             <!-- 顶部信息栏 -->
             <div class="top-bar">
                 <div class="company-info">
-                    <img src="images/logo.png" alt="深圳市景鹏环保科技有限公司" class="logo">
-                    <h1 class="company-name">深圳市景鹏环保科技有限公司</h1>
+                    <img src="images/logo.png" alt="深圳市涟漪环保科技有限公司" class="logo">
+                    <h1 class="company-name">深圳市涟漪环保科技有限公司</h1>
                 </div>
                 <div class="contact-info">
-                    联系人：李工 15817290147
+                    联系人：杨工 13544268124
                 </div>
             </div>
             <!-- 导航菜单栏 -->
@@ -60,28 +60,28 @@
                             <i class="icon-phone"></i>
                             <div class="info-content">
                                 <h3>电话咨询</h3>
-                                <p>15817290147</p>
+                                <p>13544268124</p>
                             </div>
                         </div>
                         <div class="info-item">
                             <i class="icon-email"></i>
                             <div class="info-content">
                                 <h3>邮箱</h3>
-                                <p>183523573@qq.com</p>
+                                <p>1362837975@qq.com</p>
                             </div>
                         </div>
                         <div class="info-item">
                             <i class="icon-qq"></i>
                             <div class="info-content">
                                 <h3>QQ</h3>
-                                <p>183523573</p>
+                                <p>1362837975</p>
                             </div>
                         </div>
                         <div class="info-item">
                             <i class="icon-address"></i>
                             <div class="info-content">
                                 <h3>公司地址</h3>
-                                <p>深圳市光明区马田街道合水口社区科明大厦A座601</p>
+                                <p>深圳市光明区马田街道马山头社区电达谷源产业园19栋610</p>
                             </div>
                         </div>
                     </div>
@@ -102,18 +102,18 @@
             <div class="footer-content">
                 <div class="footer-info">
                     <h3>联系我们</h3>
-                    <p>电话：15817290147</p>
-                    <p>手机：15817290147</p>
-                    <p>邮箱：183523573@qq.com</p>
-                    <p>Q Q：183523573</p>
-                    <p>地址：深圳市光明区马田街道合水口社区科明大厦A座601</p>
+                    <p>电话：13544268124</p>
+                    <p>手机：13544268124</p>
+                    <p>邮箱：1362837975@qq.com</p>
+                    <p>Q Q：1362837975</p>
+                    <p>地址：深圳市光明区马田街道马山头社区电达谷源产业园19栋610</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>版权所有：深圳市景鹏环保科技有限公司</p>
+                <p>版权所有：深圳市涟漪环保科技有限公司</p>
                 <p class="beian">
-                    <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2024299875号-1</a>
-                    <a href="http://www.beian.gov.cn/portal/registerSystemInfo" target="_blank">粤公网安备 44030002004548号</a>
+                    <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2024309855号-1</a>
+                    <a href="http://www.beian.gov.cn/portal/registerSystemInfo" target="_blank">粤公网安备 44030002004747号</a>
                 </p>
             </div>
         </div>
@@ -129,7 +129,7 @@
         // 百度地图初始化
         window.onload = function() {
             var map = new BMap.Map("baiduMap");
-            var point = new BMap.Point(113.88551, 22.78048);
+            var point = new BMap.Point(113.883428, 22.770501);
             map.centerAndZoom(point, 17);
             
             // 添加标记
@@ -141,7 +141,7 @@
             map.addControl(new BMap.ScaleControl());
             
             // 添加信息窗口
-            var infoWindow = new BMap.InfoWindow("深圳市景鹏环保科技有限公司<br>地址：深圳市光明区马田街道合水口社区科明大厦A座601");
+            var infoWindow = new BMap.InfoWindow("深圳市涟漪环保科技有限公司<br>地址：深圳市光明区马田街道马山头社区电达谷源产业园19栋610");
             marker.addEventListener("click", function(){
                 map.openInfoWindow(infoWindow, point);
             });

@@ -1,0 +1,116 @@
+/* 详情页面样式 */
+.detail-content {
+    padding: 60px 0;
+}
+
+.detail-article {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    padding: 40px;
+}
+
+.article-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.article-header h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.article-meta {
+    color: #666;
+    font-size: 14px;
+}
+
+.article-meta span {
+    margin: 0 10px;
+}
+
+.article-content {
+    color: #333;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.article-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.article-content p {
+    margin-bottom: 15px;
+}
+
+.article-attachment {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.attachment-title {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.attachment-link {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #2ecc71;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.attachment-link:hover {
+    background: #27ae60;
+}
+
+/* 错误提示样式 */
+.error-message {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
+
+/* 修改下载按钮样式 */
+.article-footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.download-btn {
+    /* 移除position: fixed相关样式 */
+}
+
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: #2ecc71;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.btn-download:hover {
+    background: #27ae60;
+    transform: translateY(-2px);
+}
+
+.icon-download {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>') no-repeat center;
+    background-size: contain;
+} 

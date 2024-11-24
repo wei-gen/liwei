@@ -2,62 +2,56 @@ $(document).ready(function() {
     let currentPage = 1;
     const pageSize = 5;
 
-    // 加载项目列表
-    function loadProjects(page) {
+    // 加载案例列表
+    function loadCases(page) {
         $.ajax({
             url: CONFIG.API_BASE_URL + '/business/list',
             method: 'GET',
             data: {
                 current: page,
                 size: pageSize,
-                type: 1
+                type: 2
             },
             success: function(response) {
                 if (response.code === 200) {
-                    renderProjects(response.data);
+                    renderCases(response.data);
                     renderPagination(response.data);
                 }
             },
             error: function(error) {
-                console.error('获取项目列表失败:', error);
-                $('#projectsContainer').html(`
+                console.error('获取案例列表失败:', error);
+                $('#casesContainer').html(`
                     <div class="error-message">
-                        <p>暂时无法加载项目列表，请稍后再试</p>
+                        <p>暂时无法加载案例列表，请稍后再试</p>
                     </div>
                 `);
             }
         });
     }
 
-    // 渲染项目列表
-    function renderProjects(data) {
-        const container = $('#projectsContainer');
+    // 渲染案例列表
+    function renderCases(data) {
+        const container = $('#casesContainer');
         container.empty();
 
-        // 添加说明文字
-        const noticeHtml = `
-            <div class="project-notice">
-                <p>根据《环境影响评价公众参与办法》中的有关要求，我单位将所负责编制的建设项目环境影响评价相关信息面向社会公示，详见附件。如有意见，可来电向我单位反映。</p>
-                <p>联系电话: 13544268124</p>
-            </div>
-        `;
-        container.append(noticeHtml);
-
-        // 渲染项目列表
         data.records.forEach(function(item) {
-            const projectHtml = `
-                <div class="project-item">
-                    <div class="project-content">
+            const caseHtml = `
+                <div class="case-item">
+                    <div class="case-image">
+                        <img src="${item.image || 'images/case-default.jpg'}" alt="${item.title}">
+                        <div class="case-date">${formatDate(item.createTime)}</div>
+                    </div>
+                    <div class="case-content">
                         <h3>${item.title}</h3>
-                        <p class="project-excerpt">${item.description || '暂无描述'}</p>
-                        <div class="project-meta">
-                            <div class="project-date">${formatDate(item.createTime)}</div>
-                            <a href="detail.html?id=${item.id}&type=1" class="read-more">查看详情</a>
+                        <p class="case-excerpt">${item.description || '暂无描述'}</p>
+                        <div class="case-meta">
+                            <span class="views">浏览：${item.checkNum || 0}</span>
+                            <a href="detail.html?id=${item.id}&type=2" class="read-more">查看详情</a>
                         </div>
                     </div>
                 </div>
             `;
-            container.append(projectHtml);
+            container.append(caseHtml);
         });
     }
 
@@ -99,11 +93,11 @@ $(document).ready(function() {
     $('#paginationContainer').on('click', 'a', function(e) {
         e.preventDefault();
         const page = $(this).data('page');
-        loadProjects(page);
+        loadCases(page);
         // 滚动到页面顶部
-        $('html, body').animate({ scrollTop: $('.project-list').offset().top - 120 }, 500);
+        $('html, body').animate({ scrollTop: $('.cases-list').offset().top - 120 }, 500);
     });
 
     // 初始加载
-    loadProjects(1);
+    loadCases(1);
 }); 
